@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "An implementation of exponentially weighted frecency, with advanced structures and a Django Field."
 authors = ["Michael J.T. O'Kelly <mokelly@gmail.com>"]
 license = "MIT"
-readme = "README.md"
+readme = "README.rst"
 
 [tool.poetry.dependencies]
 python = ">2.7"
