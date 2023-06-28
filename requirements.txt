@@ -1,3 +1,0 @@
-numpy
-future
-pip

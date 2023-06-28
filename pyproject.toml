@@ -1,18 +1,18 @@
 [tool.poetry]
 name = "frecency"
-version = "0.1.0"
+version = "0.1.1"
 description = "An implementation of exponentially weighted frecency, with advanced structures and a Django Field."
 authors = ["Michael J.T. O'Kelly <mokelly@gmail.com>"]
 license = "MIT"
 readme = "README.rst"
 
 [tool.poetry.dependencies]
-python = ">2.7"
+python = "2.7 | ^3.8"
 numpy = ">1.16"
 future = ">0.16"
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^7.4.0"
+pytest = ">2"
 
 [build-system]
 requires = ["poetry-core"]
