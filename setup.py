@@ -2,13 +2,18 @@
 
 import os
 import sys
-import pip
 
-pip_version_str = pip.__version__
-pip_major_version = int(pip_version_str.split(".")[0])
-if pip_major_version < 20:
-    if hasattr(os, "link"):
-        del os.link  # Hack workaround for http://bugs.python.org/issue8876
+try:
+    import pip
+except ImportError:
+    # Client does not use pip, so no need to fix this issue.
+    pass
+else:
+    pip_version_str = pip.__version__
+    pip_major_version = int(pip_version_str.split(".")[0])
+    if pip_major_version < 20:
+        if hasattr(os, "link"):
+            del os.link  # Hack workaround for http://bugs.python.org/issue8876
 
 try:
     from setuptools import setup, find_packages
