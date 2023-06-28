@@ -147,18 +147,6 @@ files = [
 six = ">=1.0.0,<2.0.0"
 
 [[package]]
-name = "more-itertools"
-version = "9.1.0"
-description = "More routines for operating on iterables, beyond itertools"
-category = "dev"
-optional = false
-python-versions = ">=3.7"
-files = [
-    {file = "more-itertools-9.1.0.tar.gz", hash = "sha256:cabaa341ad0389ea83c17a94566a53ae4c9d07349861ecb14dc6d0345cf9ac5d"},
-    {file = "more_itertools-9.1.0-py3-none-any.whl", hash = "sha256:d2bc7f02446e86a68911e58ded76d6561eea00cddfb2a91e7019bbb586c799f3"},
-]
-
-[[package]]
 name = "numpy"
 version = "1.16.6"
 description = "NumPy is the fundamental package for array computing with Python."
@@ -379,5 +367,5 @@ testing = ["func-timeout", "jaraco.itertools", "pathlib2", "unittest2"]
 
 [metadata]
 lock-version = "2.0"
-python-versions = "2.7 | ^3.8"
-content-hash = "a1ee81629354e6204807ba584f7c833e40d9eae826e4b7c8d73790949d7eb65b"
+python-versions = "^2.7 || >=3.8"
+content-hash = "a7ecdb2bd2f6e60fd090f265309b468a46e61d876d5e6981f842d8142a426a1c"
