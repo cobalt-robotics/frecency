@@ -1,4 +1,4 @@
-.PHONY: help clean clean-pyc clean-build list test test-all coverage docs release
+.PHONY: help clean clean-pyc clean-build list test test-all coverage docs dist release
 
 help:
 	@echo "clean-build - remove build artifacts"
@@ -8,7 +8,8 @@ help:
 	@echo "testall - run tests on every Python version with tox"
 	@echo "coverage - check code coverage quickly with the default Python"
 	@echo "docs - generate Sphinx HTML documentation, including API docs"
-	@echo "release - package a release"
+	@echo "dist - build the package"
+	@echo "release - build and upload a release to github"
 
 clean: clean-build clean-pyc
 
@@ -45,5 +46,9 @@ docs:
 	$(MAKE) -C docs html
 	open docs/_build/html/index.html
 
+dist: clean
+	nix-shell --pure --run "python -m build"
+
 release: clean
 	nix-shell --pure --run "python -m build"
+	nix-shell --pure --run 'scripts/create_github_release.py'
